@@ -49,8 +49,8 @@ $this->load->view('dist/_partials/header');
                             <td><?= $a['jurusan']; ?></td>
                             <td><?= $a['sub_kelas']; ?></td>
                             <td>
-                                <a href="#" class="btn btn-icon btn-warning"><i class="far fa-edit"></i></a>
-                                <a href="#" class="btn btn-icon btn-danger"><i class="fa fa-trash"></i></a>
+                                <a href="<?php echo base_url('KelasController/edit/'.$a['id_kelas']); ?>" class="btn btn-icon btn-warning"><i class="far fa-edit"></i></a>
+                                <a href="<?php echo base_url('KelasController/hapus/'.$a['id_kelas']); ?>" class="btn btn-icon btn-danger"><i class="fa fa-trash"></i></a>
                             </td>
                             </tr>
                         <?php } ?>

@@ -3,9 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dist extends CI_Controller {
 
+	public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('ModelSiswa');
+
+		// var_dump($this->session->userdata());die();
+    }
+
 	public function index() {
 		$data = array(
-			'title' => "Ecommerce Dashboard"
+			'title' => "Absensi Sekolah"
 		);
 		$this->load->view('dist/index', $data);
 	}

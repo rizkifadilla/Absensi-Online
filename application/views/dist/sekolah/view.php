@@ -21,36 +21,35 @@ $this->load->view('dist/_partials/header');
                     <h4>Profile Sekolah</h4>
                 </div>
                 <div class="card-body">
-                <div class="form-group">
+                  <form method="post" action="<?php echo base_url().'SekolahController/update'; ?>" class="form-group mt-4 mb-4">
+                    <div class="form-group">
                       <label>Id Sekolah</label>
-                      <input type="text" class="form-control" readonly value="<?= $sekolah->id_sekolah ?>">
+                      <input type="text" class="form-control" name="id_sekolah" readonly value="<?= $sekolah->id_sekolah ?>">
                     </div>
                     <div class="form-group">
                       <label>Nama Sekolah</label>
-                      <input type="text" class="form-control" value="<?= $sekolah->nama_sekolah ?>">
+                      <input type="text" class="form-control" name="nama_sekolah" value="<?= $sekolah->nama_sekolah ?>">
                     </div>
                     <div class="form-group">
                       <label>Alamat Sekolah</label>
-                      <input type="text" class="form-control" value="<?= $sekolah->alamat_sekolah ?>">
+                      <input type="text" class="form-control" name="alamat_sekolah" value="<?= $sekolah->alamat_sekolah ?>">
                     </div>
                     <div class="form-group">
                       <label>Lokasi Lat</label>
-                      <input type="text" class="form-control" value="<?= $sekolah->lokasi_lat ?>">
+                      <input type="text" class="form-control" name="lokasi_lat" value="<?= $sekolah->lokasi_lat ?>">
                     </div>
                     <div class="form-group">
                       <label>Lokasi Long</label>
-                      <input type="text" class="form-control" value="<?= $sekolah->lokasi_long ?>">
-                    </div>
-                    <div class="form-group">
-                      <label>Jarak</label>
-                      <input type="text" class="form-control" value="<?= $sekolah->jarak ?>">
+                      <input type="text" class="form-control" name="lokasi_long" value="<?= $sekolah->lokasi_long ?>">
                     </div>
                     <div class="row mb-2">
                         <div class="col-md-8"></div>
                         <div class="col-md-4 container">
-                            <a href="" class="btn btn-icon icon-left btn-warning float-right"><i class="fas fa-check"></i> Update</a>
+                          <button class="btn btn-icon icon-left btn-success float-right" type="submit"><i class="fas fa-check"></i> 
+                          Create</button>
                         </div>
                     </div>
+                  </form>
                 </div>
               </div>
             </div>

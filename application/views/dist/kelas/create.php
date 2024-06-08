@@ -21,13 +21,18 @@ $this->load->view('dist/_partials/header');
                     <h4>Form Create Kelas</h4>
                 </div>
                 <div class="card-body">
+                  <form method="post" action="<?php echo base_url().'KelasController/save'; ?>" class="form-group mt-4">
+                    <div class="form-group">
+                      <label>Id Kelas</label>
+                      <input type="text" class="form-control" name="id_kelas">
+                    </div>
                     <div class="form-group">
                       <label>Nama Kelas</label>
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="nama_kelas">
                     </div>
                     <div class="form-group">
                       <label>tingkat</label>
-                      <select class="form-control">
+                      <select class="form-control" name="tingkat">
                         <option>10</option>
                         <option>11</option>
                         <option>12</option>
@@ -35,7 +40,7 @@ $this->load->view('dist/_partials/header');
                     </div>
                     <div class="form-group">
                       <label>Jurusan</label>
-                      <select class="form-control">
+                      <select class="form-control" name="jurusan">
                         <option>TKJ</option>
                         <option>MM</option>
                         <option>RPL</option>
@@ -43,14 +48,16 @@ $this->load->view('dist/_partials/header');
                     </div>
                     <div class="form-group">
                       <label>Sub Kelas</label>
-                      <input type="text" class="form-control">
+                      <input type="text" class="form-control" name="sub_kelas">
                     </div>
                     <div class="row mb-2">
                         <div class="col-md-8"></div>
                         <div class="col-md-4 container">
-                            <a href="" class="btn btn-icon icon-left btn-success float-right"><i class="fas fa-check"></i> Create</a>
+                          <button class="btn btn-icon icon-left btn-success float-right" type="submit"><i class="fas fa-check"></i> 
+                          Create</button>
                         </div>
                     </div>
+                  </form>
                 </div>
               </div>
             </div>

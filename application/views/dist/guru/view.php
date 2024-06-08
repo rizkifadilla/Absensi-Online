@@ -34,6 +34,7 @@ $this->load->view('dist/_partials/header');
                             <th>Id Guru</th>
                             <th>NIP</th>
                             <th>Nama Guru</th>
+                            <th></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -41,11 +42,11 @@ $this->load->view('dist/_partials/header');
                         foreach ($guru as $a) { ?>
                             <tr>
                             <td><?= $a['id_guru']; ?></td>
-                            <td><?= $a['nip']; ?></td>
+                            <td><?= $a['id_guru']; ?></td>
                             <td><?= $a['nama']; ?></td>
                             <td>
-                                <a href="#" class="btn btn-icon btn-warning"><i class="far fa-edit"></i></a>
-                                <a href="#" class="btn btn-icon btn-danger"><i class="fa fa-trash"></i></a>
+                                <a href="<?php echo base_url('GuruController/edit/'.$a['id_guru']); ?>" class="btn btn-icon btn-warning"><i class="far fa-edit"></i></a>
+                                <a href="<?php echo base_url('GuruController/hapus/'.$a['id_guru']); ?>" class="btn btn-icon btn-danger"><i class="fa fa-trash"></i></a>
                             </td>
                             </tr>
                         <?php } ?>

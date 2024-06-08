@@ -35,7 +35,6 @@ $this->load->view('dist/_partials/header');
                             <th>Nama Orang Tua</th>
                             <th>Email</th>
                             <th>Nomor Telepon</th>
-                            <th>Nama Murid</th>
                             <th>Action</th>
                           </tr>
                         </thead>
@@ -46,11 +45,10 @@ $this->load->view('dist/_partials/header');
                             <td><?= $a['id_orang_tua']; ?></td>
                             <td><?= $a['nama_orang_tua']; ?></td>
                             <td><?= $a['email']; ?></td>
-                            <td><?= "Robert David Chaniago" ?></td>
                             <td><?= $a['nomor_telepon']; ?></td>
                             <td>
-                                <a href="#" class="btn btn-icon btn-warning"><i class="far fa-edit"></i></a>
-                                <a href="#" class="btn btn-icon btn-danger"><i class="fa fa-trash"></i></a>
+                                <a href="<?php echo base_url('OrangTuaController/edit/'.$a['id_orang_tua']); ?>" class="btn btn-icon btn-warning"><i class="far fa-edit"></i></a>
+                                <a href="<?php echo base_url('OrangTuaController/hapus/'.$a['id_orang_tua']); ?>" class="btn btn-icon btn-danger"><i class="fa fa-trash"></i></a>
                             </td>
                             </tr>
                         <?php } ?>

@@ -21,20 +21,22 @@ $this->load->view('dist/_partials/header');
                     <h4>Form Create Guru</h4>
                 </div>
                 <div class="card-body">
-                <div class="form-group">
-                      <label>NIP</label>
-                      <input type="text" class="form-control">
+                <form method="post" action="<?php echo base_url().'GuruController/save'; ?>" class="form-group mt-4">
+                  <div class="form-group">
+                    <label>NIP</label>
+                    <input type="text" class="form-control" name="id_guru">
+                  </div>
+                  <div class="form-group">
+                    <label>Nama Guru</label>
+                    <input type="text" class="form-control" name="nama">
+                  </div>
+                  <div class="row mb-2">
+                  <div class="col-md-8"></div>
+                    <div class="col-md-4 container">
+                      <button class="btn btn-icon icon-left btn-success float-right" type="submit"><i class="fas fa-check"></i> Create</button>
                     </div>
-                    <div class="form-group">
-                      <label>Nama Guru</label>
-                      <input type="text" class="form-control">
-                    </div>
-                    <div class="row mb-2">
-                        <div class="col-md-8"></div>
-                        <div class="col-md-4 container">
-                            <a href="" class="btn btn-icon icon-left btn-success float-right"><i class="fas fa-check"></i> Create</a>
-                        </div>
-                    </div>
+                  </div>
+                </form>
                 </div>
               </div>
             </div>
