@@ -52,3 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'dist';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['login'] = 'Api/auth/login';
+$route['absen/submit'] = 'Api/absen/submit_absen';
+$route['absen/izin'] = 'Api/absen/submit_izin';
+$route['absen/list_absen'] = 'Api/absen/get_absensi_by_id_siswa';
